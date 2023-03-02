@@ -1,6 +1,6 @@
 # Mage2 Module AnassTouatiCoder InstantConfigurationCopy
 
-    ``anasstouaticoder/magento2-module-sitemapreemoveitem``
+    ``anasstouaticoder/magento2-module-sitemapremoveitem``
 
  - [Main Functionalities](#markdown-header-main-functionalities)
  - [Installation](#markdown-header-installation)
@@ -17,7 +17,7 @@ Provide easy way to copy fields path in configuration section
 
 ### install from composer 2
 
- - In magento project root directory run command `composer require anasstouaticoder/magento2-module-sitemapreemoveitem`
+ - In magento project root directory run command `composer require anasstouaticoder/magento2-module-sitemapremoveitem`
  - Enable the module by running `php bin/magento module:enable AnassTouatiCoder_SitemapRemoveItem`
  - Flush the cache by running `php bin/magento cache:flush`
 
