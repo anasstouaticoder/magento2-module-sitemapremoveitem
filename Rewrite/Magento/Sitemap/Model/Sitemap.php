@@ -145,57 +145,6 @@ class Sitemap extends \Magento\Sitemap\Model\Sitemap
             $sitemapItemFactory
         );
     }
-    /**
-     * {@inheritdoc }
-     */
-    protected function _getSitemapRow($url, $lastmod = null, $changefreq = null, $priority = null, $images = null)
-    {
-        $url = $this->_getUrl($url);
-        $row = '<loc>' . $this->_escaper->escapeUrl($url) . '</loc>';
-        if ($lastmod) {
-            $row .= '<lastmod>' . $this->_getFormattedLastmodDate($lastmod) . '</lastmod>';
-        }
-        if ($changefreq) {
-            $row .= '<changefreq>' . $this->_escaper->escapeHtml($changefreq) . '</changefreq>';
-        }
-        if ($priority) {
-            $row .= sprintf('<priority>%.1f</priority>', $this->_escaper->escapeHtml($priority));
-        }
-        if ($images) {
-            // Add Images to sitemap
-            foreach ($images->getCollection() as $image) {
-
-                // Adding NullSafe Logic
-                $title = $images->getTitle() === null ? $images->getTitle() : '';
-                $row .= '<image:image>';
-                $row .= '<image:loc>' . $this->_escaper->escapeUrl($image->getUrl()) . '</image:loc>';
-                $row .= '<image:title>' . $this->escapeXmlText($title) . '</image:title>';
-                if ($image->getCaption()) {
-                    $row .= '<image:caption>' . $this->escapeXmlText($image->getCaption()) . '</image:caption>';
-                }
-                $row .= '</image:image>';
-            }
-            // Add PageMap image for Google web search
-            $row .= '<PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0"><DataObject type="thumbnail">';
-            $row .= '<Attribute name="name" value="' . $this->_escaper->escapeHtmlAttr($title) . '"/>';
-            $row .= '<Attribute name="src" value="' . $this->_escaper->escapeUrl($images->getThumbnail()) . '"/>';
-            $row .= '</DataObject></PageMap>';
-        }
-
-        return '<url>' . $row . '</url>';
-    }
-
-    /**
-     * I just changed the visibility
-     * {@inheritDoc}
-     */
-    protected function escapeXmlText(string $text): string
-    {
-        $doc = new \DOMDocument('1.0', 'UTF-8');
-        $fragment = $doc->createDocumentFragment();
-        $fragment->appendChild($doc->createTextNode($text));
-        return $doc->saveXML($fragment);
-    }
 
     /**
      * Sitemap item mapper for backwards compatibility
@@ -254,9 +203,11 @@ class Sitemap extends \Magento\Sitemap\Model\Sitemap
     }
 
     /**
+     * Filter Sitemap Items
+     *
      * @return void
      */
-    protected function filterSitemapItemsByConfig()
+    protected function filterSitemapItemsByConfig(): void
     {
         $ignoredURLs = $this->getIgnoredUrls();
 
@@ -264,7 +215,8 @@ class Sitemap extends \Magento\Sitemap\Model\Sitemap
         if ($ignoredURLs) {
             foreach ($this->_sitemapItems as $key => $item) {
                 foreach ($ignoredURLs as $URLObject) {
-                    if ($item->getUrl() === $URLObject['url']) {
+                    // use strpos instead of str_contains for backward compatibility
+                    if (strpos($item->getUrl(), $URLObject['url']) !== false) {
                         unset($this->_sitemapItems[$key]);
                     }
                 }
@@ -274,6 +226,7 @@ class Sitemap extends \Magento\Sitemap\Model\Sitemap
 
     /**
      * Get Ignored Url List
+     *
      * @return mixed
      */
     protected function getIgnoredUrls()

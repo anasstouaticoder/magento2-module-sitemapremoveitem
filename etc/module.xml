@@ -12,6 +12,7 @@
     <module name="AnassTouatiCoder_SitemapRemoveItem">
         <sequence>
             <module name="Magento_Sitemap"/>
+            <module name="AnassTouatiCoder_Base"/>
         </sequence>
     </module>
 </config>

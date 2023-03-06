@@ -1,4 +1,4 @@
-# Mage2 Module AnassTouatiCoder InstantConfigurationCopy
+# Mage2 Module AnassTouatiCoder SitemapRemoveItem
 
     ``anasstouaticoder/magento2-module-sitemapremoveitem``
 
@@ -30,14 +30,16 @@ Provide easy way to copy fields path in configuration section
 
 ## Configuration
 
+Go to Store => Configution => Section Atouati Tools
+add Items that will be removed from SiteMaps 
+
+
 ### In Back Office
 
 
 ## Specifications
 
-This plugin provides easy way to copy configuration field paths to clipboard.
-
-also it provides easy copy to clipboard the values of fields : text, textarea, select, and multiselect
+This plugin gives the administrators the possibility to ignore urls from being added to Sitemap.
 
 ## Usage
 
