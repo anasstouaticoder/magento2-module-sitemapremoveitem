@@ -39,10 +39,15 @@ add Items that will be removed from SiteMaps
 
 ## Specifications
 
-This plugin gives the administrators the possibility to ignore urls from being added to Sitemap.
+This plugin gives the administrators the ability to clean Sitemap from unwanted URLS rows.
 
 ## Usage
+In Back Office, go to Store => Configuration => ATOUATI TOOLS => General => URLs to remove from Sitemap.
 
+Add unwanted uri to the table and save.
+Make sure to select URI Match Type that you needed: Contains removes one or more,  equals removes one row).
+- use case 1: URI => women/tops-women URI Match Type => Contains
+- use case 2: URI => men/bottoms-men/pants-men.html URI Match Type => Equals
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)

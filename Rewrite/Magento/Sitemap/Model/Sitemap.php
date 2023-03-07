@@ -210,13 +210,18 @@ class Sitemap extends \Magento\Sitemap\Model\Sitemap
     protected function filterSitemapItemsByConfig(): void
     {
         $ignoredURLs = $this->getIgnoredUrls();
-
         $ignoredURLs = !empty($ignoredURLs) ? json_decode($ignoredURLs, true) : false;
+
         if ($ignoredURLs) {
-            foreach ($this->_sitemapItems as $key => $item) {
-                foreach ($ignoredURLs as $URLObject) {
+            foreach ($ignoredURLs as $URLObject) {
+                foreach ($this->_sitemapItems as $key => $item) {
+                    if ($item->getUrl() === $URLObject['uri'] && $URLObject['uri_type'][0] === 'equals') {
+                        unset($this->_sitemapItems[$key]);
+                        break;
+                    }
                     // use strpos instead of str_contains for backward compatibility
-                    if (strpos($item->getUrl(), $URLObject['url']) !== false) {
+                    if (strpos($item->getUrl(), $URLObject['uri']) !== false &&
+                        $URLObject['uri_type'][0] === 'contains') {
                         unset($this->_sitemapItems[$key]);
                     }
                 }
