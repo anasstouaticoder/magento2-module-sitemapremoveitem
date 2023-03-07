@@ -10,7 +10,7 @@
 
 
 ## Main Functionalities
-Provide easy way to copy fields path in configuration section
+Provide easy way to remove unwanted sitemap rows.
 
 ## Installation
 \* = in production please use the `--keep-generated` option
@@ -31,15 +31,13 @@ Provide easy way to copy fields path in configuration section
 ## Configuration
 
 Go to Store => Configution => Section Atouati Tools
-add Items that will be removed from SiteMaps 
-
-
-### In Back Office
-
+add Items that will be removed from SiteMaps
 
 ## Specifications
 
-This plugin gives the administrators the ability to clean Sitemap from unwanted URLS rows.
+This plugin gives the administrators the ability to clean up Sitemap from unwanted URLS rows.
+
+[see Demo](https://github.com/anasstouaticoder/magento2-module-sitemapremoveitem/wiki)
 
 ## Usage
 In Back Office, go to Store => Configuration => ATOUATI TOOLS => General => URLs to remove from Sitemap.

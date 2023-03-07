@@ -22,7 +22,7 @@
         "magento/framework": "103.0.*"
     },
     "type": "magento2-module",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "license": [
