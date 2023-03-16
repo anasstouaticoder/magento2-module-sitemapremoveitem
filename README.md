@@ -1,4 +1,13 @@
-# Mage2 Module AnassTouatiCoder SitemapRemoveItem
+# 
+<h1 style="text-align: center;">Magento 2 Module AnassTouatiCoder SitemapRemoveItem</h1>
+<div style="text-align: center;">
+  <p>Remove unwanted Sitemap items based on their URI</p>
+  <img src="https://img.shields.io/badge/magento-2.2%20|%202.3%20|%202.4-brightgreen.svg?logo=magento&longCache=true&style=flat-square" alt="Supported Magento Versions" />
+  <a href="https://packagist.org/packages/anasstouaticoder/magento2-module-sitemapremoveitem" target="_blank"><img src="https://img.shields.io/packagist/v/anasstouaticoder/magento2-module-sitemapremoveitem.svg?style=flat-square" alt="Latest Stable Version" /></a>
+  <a href="https://packagist.org/packages/anasstouaticoder/magento2-module-sitemapremoveitem" target="_blank"><img src="https://poser.pugx.org/anasstouaticoder/magento2-module-sitemapremoveitem/downloads" alt="Composer Downloads" /></a>
+  <a href="https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity" target="_blank"><img src="https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square" alt="Maintained - Yes" /></a>
+  <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/license-MIT-blue.svg" /></a>
+</div>
 
     ``anasstouaticoder/magento2-module-sitemapremoveitem``
 
@@ -6,7 +15,8 @@
  - [Installation](#markdown-header-installation)
  - [Configuration](#markdown-header-configuration)
  - [Specifications](#markdown-header-specifications)
- - [Attributes](#markdown-header-attributes)
+ - [Usage](#markdown-header-usage)
+ - [License](#markdown-header-license)
 
 
 ## Main Functionalities
