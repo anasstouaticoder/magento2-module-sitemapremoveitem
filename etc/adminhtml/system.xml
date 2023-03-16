@@ -11,16 +11,16 @@
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <section id="anasstouaticoder_sitemap" translate="label" type="text" sortOrder="200" showInDefault="1"
-                 showInWebsite="1" showInStore="0">
+                 showInWebsite="1" showInStore="1">
             <label>SiteMap</label>
             <tab>anass_Touati_coder</tab>
             <resource>AnassTouatiCoder_SitemapRemoveItem::anasstouaticoder_sitemapremoveitem</resource>
-            <group id="general" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="0"
-                   showInStore="0">
+            <group id="general" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
                 <label>General</label>
-                <field id="ignored_url_list" translate="label,comment" sortOrder="100" showInDefault="1"
+                <field id="ignored_uri_list" translate="label,comment" sortOrder="100" showInDefault="1"
                        showInWebsite="1" showInStore="1">
-                    <label>URLs to remove from SiteMap</label>
+                    <label>URLs to remove from Sitemap</label>
                     <frontend_model>AnassTouatiCoder\SitemapRemoveItem\Block\Adminhtml\Form\Field\SiteMapCleanerList</frontend_model>
                     <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
                     <comment><![CDATA[
@@ -30,8 +30,15 @@
                         <ul>
                             <li>Use case 1: URI => women/tops-women URI Match Type => Contains</li>
                             <li>Use case 2: URI => men/bottoms-men/pants-men.html URI Match Type => Equals</li>
-                        </ul>]]>
-                    </comment>
+                        </ul>
+                        <p>There are two ways to configurate this field:</p>
+                        <ol>
+                        <li>Fill the table above then click Save Config button</li>
+                        <li>Use export, and import Buttons, <span style="color:red;">Note that</span>: if want to change existing list
+                         items you should export the existing list as CSV file then modify it finally import the CSV
+                         file</li>
+                        </ol>
+                        ]]></comment>
                 </field>
             </group>
         </section>

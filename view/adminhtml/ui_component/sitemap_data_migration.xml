@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<uiComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="config" xsi:type="array">
+            <item name="imports" xsi:type="array">
+                <item name="import_button" xsi:type="string">AnassTouatiCoder_SitemapRemoveItem/js/import-button</item>
+            </item>
+        </item>
+    </argument>
+    <button name="import_button" class="Magento\Backend\Block\Widget\Button\Button" label="Import" />
+</uiComponent>

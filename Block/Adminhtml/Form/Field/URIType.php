@@ -14,6 +14,11 @@ use Magento\Framework\View\Element\Html\Select;
 
 class URIType extends Select
 {
+    public const URI_TYPE_LIST =
+        [
+            'contains' => 'Contains',
+            'equals' => 'Equals'
+        ];
     /**
      * Add select options
      *
@@ -21,10 +26,12 @@ class URIType extends Select
      */
     public function addOptions(): array
     {
-        return [
-            ['value' => 'contains', 'label' => __('Contains')],
-            ['value' => 'equals', 'label' => __('Equals')]
-        ];
+        $optionList = [];
+        foreach (self::URI_TYPE_LIST as $value => $label) {
+            $optionList[] = ['value' => $value, 'label' => __($label)];
+        }
+
+        return $optionList;
     }
 
     /**
