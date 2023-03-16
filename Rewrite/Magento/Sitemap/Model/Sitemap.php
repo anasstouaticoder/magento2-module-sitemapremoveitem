@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace AnassTouatiCoder\SitemapRemoveItem\Rewrite\Magento\Sitemap\Model;
 
+use AnassTouatiCoder\SitemapRemoveItem\Model\Config;
 use Magento\Config\Model\Config\Reader\Source\Deployed\DocumentRoot;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\Filesystem\DirectoryList;
@@ -29,12 +30,10 @@ use Magento\Sitemap\Model\ResourceModel\Catalog\ProductFactory;
 use Magento\Sitemap\Model\ResourceModel\Cms\PageFactory;
 use Magento\Sitemap\Model\SitemapConfigReaderInterface;
 use Magento\Sitemap\Model\SitemapItemInterfaceFactory;
-use Magento\Store\Model\ScopeInterface;
 use Magento\Store\Model\StoreManagerInterface;
 
 class Sitemap extends \Magento\Sitemap\Model\Sitemap
 {
-    public const XML_PATH_IGNORED_URLS = 'anasstouaticoder_sitemap/general/ignored_url_list';
     /**
      * @var ItemProviderInterface|mixed
      */
@@ -237,8 +236,9 @@ class Sitemap extends \Magento\Sitemap\Model\Sitemap
     protected function getIgnoredUrls()
     {
         return $this->scopeConfig->getValue(
-            self::XML_PATH_IGNORED_URLS,
-            ScopeInterface::SCOPE_STORE
+            Config::XML_PATH_IGNORED_URI_LIST,
+            Config::SCOPE_TYPE_STORES,
+            $this->getStoreId()
         );
     }
 }

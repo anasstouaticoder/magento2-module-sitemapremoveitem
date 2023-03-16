@@ -19,7 +19,7 @@ class Config
     public const SCOPE_TYPE_WEBSITES = 'websites';
 
     public const SCOPE_TYPE_STORES = 'stores';
-    private const XML_PATH_IGNORED_URI_LIST = 'anasstouaticoder_sitemap/general/ignored_uri_list';
+    public const XML_PATH_IGNORED_URI_LIST = 'anasstouaticoder_sitemap/general/ignored_uri_list';
 
     /**
      * @var ScopeConfigInterface
