@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<config>
+    <default>
+        <atouati_data_config_sitemapremoveitem>
+            <headers><![CDATA[URI Value,URI Type]]></headers>
+            <table_config><![CDATA[anasstouaticoder_sitemap/general/ignored_uri_list]]></table_config>
+            <table_fields>
+                <uri>text</uri>
+                <uri_type>select</uri_type>
+            </table_fields>
+        </atouati_data_config_sitemapremoveitem>
+    </default>
+</config>
