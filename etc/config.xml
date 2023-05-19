@@ -2,12 +2,21 @@
 <config>
     <default>
         <atouati_data_config_sitemapremoveitem>
-            <headers><![CDATA[URI Value,URI Type]]></headers>
             <table_config><![CDATA[anasstouaticoder_sitemap/general/ignored_uri_list]]></table_config>
-            <table_fields>
-                <uri>text</uri>
-                <uri_type>select</uri_type>
-            </table_fields>
+            <field_list>
+                <item1>
+                    <name>uri</name>
+                    <type>text</type>
+                    <label><![CDATA[URI Value]]></label>
+                    <required>1</required>
+                </item1>
+                <item2>
+                    <name>uri_type</name>
+                    <type>select</type>
+                    <label><![CDATA[URI Type]]></label>
+                    <required>1</required>
+                </item2>
+            </field_list>
         </atouati_data_config_sitemapremoveitem>
     </default>
 </config>
