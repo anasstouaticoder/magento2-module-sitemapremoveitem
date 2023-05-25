@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <config>
     <default>
-        <atouati_data_config_sitemapremoveitem>
+        <general_ignored_uri_list>
             <table_config><![CDATA[anasstouaticoder_sitemap/general/ignored_uri_list]]></table_config>
             <field_list>
                 <item1>
@@ -17,6 +17,6 @@
                     <required>1</required>
                 </item2>
             </field_list>
-        </atouati_data_config_sitemapremoveitem>
+        </general_ignored_uri_list>
     </default>
 </config>

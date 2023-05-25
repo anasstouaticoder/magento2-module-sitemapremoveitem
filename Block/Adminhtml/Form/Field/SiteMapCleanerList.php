@@ -17,11 +17,6 @@ use Magento\Framework\Exception\LocalizedException;
 class SiteMapCleanerList extends FieldArray
 {
     /**
-     * @var string
-     */
-    protected $dataConfig = 'atouati_data_config_sitemapremoveitem';
-
-    /**
      * @var URIType
      */
     private $uriTypeRenderer;
