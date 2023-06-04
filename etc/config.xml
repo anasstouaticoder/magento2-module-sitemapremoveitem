@@ -13,6 +13,7 @@
                 <item2>
                     <name>uri_type</name>
                     <type>select</type>
+                    <option_list><![CDATA[\AnassTouatiCoder\SitemapRemoveItem\Model\Source\URIType]]></option_list>
                     <label><![CDATA[URI Type]]></label>
                     <required>1</required>
                 </item2>

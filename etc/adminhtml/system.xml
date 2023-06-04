@@ -21,7 +21,7 @@
                 <field id="ignored_uri_list" translate="label,comment" sortOrder="100" showInDefault="1"
                        showInWebsite="1" showInStore="1">
                     <label>URLs to remove from Sitemap</label>
-                    <frontend_model>AnassTouatiCoder\SitemapRemoveItem\Block\Adminhtml\Form\Field\SiteMapCleanerList</frontend_model>
+                    <frontend_model>AnassTouatiCoder\Base\Block\Adminhtml\Form\FieldArray</frontend_model>
                     <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
                     <comment><![CDATA[
                     <p>To remove unwanted URLS from Sitemap</p>
