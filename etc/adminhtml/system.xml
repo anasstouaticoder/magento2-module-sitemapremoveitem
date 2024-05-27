@@ -25,20 +25,24 @@
                     <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
                     <comment><![CDATA[
                     <p>To remove unwanted URLS from Sitemap</p>
-                        <p>Make sure to select URI Match Type that you needed:
-                         Contains removes one or more rows, Equals removes one row).</p>
-                        <ul>
-                            <li>Use case 1: URI => women/tops-women URI Match Type => Contains</li>
-                            <li>Use case 2: URI => men/bottoms-men/pants-men.html URI Match Type => Equals</li>
-                        </ul>
-                        <p>There are two ways to configurate this field:</p>
-                        <ol>
-                        <li>Fill the table above then click Save Config button</li>
-                        <li>Use export, and import Buttons, <span style="color:red;">Note that</span>: if want to change existing list
-                         items you should export the existing list as CSV file then modify it finally import the CSV
-                         file</li>
-                        </ol>
-                        ]]></comment>
+                    <p>Make sure to select URI Match Type that you needed:
+                         Contains removes one or more rows, Equals removes one row).
+                    </p>
+                    <ul>
+                        <li>Use case 1: URI => women/tops-women URI Match Type => Contains</li>
+                        <li>Use case 2: URI => men/bottoms-men/pants-men.html URI Match Type => Equals</li>
+                    </ul>
+                    <p>There are two ways to configurate this field:</p>
+                    <ol>
+                        <li>Fill the table above then click Save Config button.</li>
+                        <li>Use export, and import Buttons.</li>
+                    </ol>
+                    <p>
+                        <span style="color:red;">Note</span>: if want to change existing list
+                        items you should export the existing list as CSV file then modify it finally import the CSV
+                        file.
+                    </p>
+                    ]]></comment>
                 </field>
             </group>
         </section>
